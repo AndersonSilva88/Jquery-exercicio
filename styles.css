@@ -70,3 +70,7 @@ ul li {
 
 
 }
+
+li:active {
+    text-decoration: line-through;
+}
