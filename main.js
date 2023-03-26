@@ -5,19 +5,16 @@ $(document).ready(function () {
         const nomeatividade = $('#nome-atividade').val();
         const novoItem = $('<li></li>');
 
-        $(`<li>${nomeatividade}</li>`).appendTo(novoItem);
-        console.log(nomeatividade);
+        $(`<a>${nomeatividade}</a>`).appendTo(novoItem);
         $(novoItem).appendTo('ul');
         $('#nome-atividade').val('');
 
     })
 
-    $('li').click(function () {
-        e.preventDefault();
-        $(this).closest('li').next('li').css(
-            'text - decoration',
-            this.checked ? 'line-through' : 'none'
-        );
+    $('ul').click(function () {
+        $('a').wrap("strike");
+        $('a').css("text-decoration", "line-through");
+
     })
 
 
